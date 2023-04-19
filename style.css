@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+/* Start of top navigation bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(0, 0, 0);
+    padding-top: 7px;
+    height: 7vh;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+h1 {
+    color:rgb(255, 255, 255)
+}
+#burger {
+    float: right;
+    height: 20px;
+    width: 30px
+}
+/* 
+    End of top navigation bar
+    Start of side bar
+*/
+#side-col {
+    width: 25%;
+    border: 2px solid black;
+    height: 93vh;
+}
+#side-col .drawer {
+    border: 1px solid black;
+    padding: 4px;
+}
+#dropt{
+    float: right;
+}
+/* 
+    End of side bar
+    Start of the main workspace screen
+*/
+#main{
+    width: 75%;
+    border: 2px solid black;
+    margin-left: 25%;
+    margin-top: -93vh;
+    height: 93vh;
+}
+/* Start of board showing attempts */
+#attmp{
+    margin: 5vh 0 0 5%;
+    display: flex;
+    flex-wrap: wrap;
+    width: 20%;
+    max-width: 150px;
+    min-width: 100px;
+    justify-content: space-between;
+}
+#attmp > span{
+    font-size: 0.75rem;
+}
+#attempts{
+    display: flex;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 150px;
+    min-width: 100px;
+    justify-content: space-around;
+    border: 1px solid rgb(0, 0, 0);
+}
+#attempts > div{
+    padding: 10px 20px 10px 20px;
+    width: 50%;
+}
+#failed{
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+/*
+    End of board showing attempts
+    Start of score display board
+*/
+#score{
+    float: right;
+    margin: -60px 6% 0 0;
+    width: 15%;
+    min-width: 50px;
+}
+#score > span{
+    font-size: 0.75rem;
+}
+#numscore{
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 10px 0px 10px 0px;
+}
+/* 
+    End of score display board
+    Start of question control buttons
+*/
+#butts{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 6% 0 5%;
+}
+/* 
+    End of question control buttons
+    Start of question display section
+*/
+#qstn{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 6% 0 5%;
+}
+#qstn > span{
+    font-size: 0.75rem;
+}
+#question{
+    border: 2px solid rgb(0, 0, 0);
+    width: 100%;
+    margin: 5px 0 0 0;
+    padding: 10px 10px 30px 10px;
+    height: fit-content;
+    border-radius: 10px;
+}
+/* 
+    End of question display section
+    Start of answer display section
+*/
+#answ{
+    padding: 20px 6% 0 5%;
+}
+.answer > span{
+    padding: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+}
+.answer{
+    display: flex;
+    align-items: center;
+    height: 40px;
+    margin: 10px 0 10px 0;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 10px;
+}
+/* 
+    End of answer display section
+*/
+/* End of main workspace screen */

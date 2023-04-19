@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <h1>KJQUEST</h1>
+        <img src="./images/burger.png" id="burger" alt="burger">
+    </nav>
+    <div id="side-col">
+        <div class="drawer">Physics <img id="dropt" src="./images/triangle.png" alt=""></div>
+        <div class="drawer">Chemistry<img id="dropt" src="./images/triangle.png" alt=""></div>
+        <div class="drawer">History<img id="dropt" src="./images/triangle.png" alt=""></div>
+        <div class="drawer">Philosophy<img id="dropt" src="./images/triangle.png" alt=""></div>
+    </div>
+    <div id="main">
+        <!-- Start of number-of-attempts board -->
+        <div id="attmp">
+            <span>Passed</span>
+            <span>Failed</span>
+            <div id="attempts">
+                <div id="passed">
+                    0
+                </div>
+                <div id="failed">
+                    0
+                </div>
+            </div>
+        </div>
+        <!-- End of number-of-attempts board -->
+        <!-- Start of score display board -->
+        <div id="score">
+            <span>Score</span>
+            <div id="numscore">0</div>
+        </div>
+        <!-- End of score display board -->
+        <!-- Start of question control buttons section -->
+        <div id="butts">
+            <button id="prev">Previous</button>
+            <button id="next">Next</button>
+        </div>
+        <!-- End of question control buttons section -->
+        <!-- Start of question display box -->
+        <div id="qstn">
+            <span>Question</span>
+            <div id="question">
+                Loading...    
+            </div>
+        </div>
+        <!-- End of question display box -->
+        <!-- Start of answer display section -->
+        <div id="answ">
+            <div id="A" class = "answer">
+                <span>A</span>
+                Loading...
+            </div>
+            <div id="B" class = "answer">
+                <span>B</span>
+                Loading...
+            </div>
+            <div id="C" class = "answer">
+                <span>C</span>
+                Loading...
+            </div>
+            <div id="D" class = "answer">
+                <span>D</span>
+                Loading...
+            </div>
+        </div>
+        <!-- End of answer display section -->
+    </div>
+    <script src="./Scripts/data.js"></script>
+</body>
+</html>
