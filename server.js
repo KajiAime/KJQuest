@@ -1,40 +1,35 @@
-// import { person } from "./datum.js";
-var http = require('http');
-var url = require('url');
-var fs = require('fs');
-var mysql = require('mysql');
+const express = require('express');
+const mysql = require('mysql');
+const ejs = require('ejs');
 
-http.createServer(
-    function(req, res){
-        var q = url.parse(req.url, true);
-        var filename = "." + q.pathname;
-        fs.readFile(filename, function(err, data){
-            if(err){
-                res.writeHead(404, {'Content-Type': 'text/html'});
-                return res.end("404 Not Found");
-            }
-            res.writeHead(200, {'Content-Type': 'text/html'});
-            res.write(data);
-            console.log(filename);
-            return res.end();
-        });
-    }
-).listen(8080);
+const app = express();
 
-var a = "";
+app.set('view engine', 'ejs');
 
-var con = mysql.createConnection({
+const con = mysql.createConnection({
     database: "kjquest",
     host: "localhost",
     user: "root",
     password: ""
 });
-con.connect(function(err){
-    if(err) throw err;
-    con.query("SELECT * FROM answers WHERE id='1'", function(err, result){
-        if(err) throw err;
-        a = result[0]["question"];
-        console.log(result[0]["question"]);
-    })
+con.connect((err) => {
+    if(err){
+        console.error('Error connecting to database ', err);
+        return;
+    }
+    console.log('Connected to database!');
 });
-export {a};
+app.get('/', (req, res) => {
+    con.query("SELECT * FROM answers WHERE id='1'", (err, results, fields) => {
+        if(err){
+            console.error('Error running query: ',err);
+            return;
+        }
+        res.render('index', {users: results });
+        console.log(results);
+    });
+});
+app.use(express.static('public'));
+app.listen(3000, () => {
+    console.log('Server started on: http://127.0.0.1:3000');
+});

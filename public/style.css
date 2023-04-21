@@ -108,7 +108,7 @@ h1 {
 #butts{
     display: flex;
     justify-content: space-between;
-    padding: 20px 6% 0 5%;
+    margin: 20px 6% 0 5%;
 }
 /* 
     End of question control buttons
@@ -139,10 +139,13 @@ h1 {
 }
 .answer > span{
     padding: 10px;
+    margin: 0 10px 0 0;
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
     color: rgb(255, 255, 255);
     background-color: rgb(0, 0, 0);
+    cursor: pointer;
+    z-index: 2;
 }
 .answer{
     display: flex;
@@ -153,6 +156,7 @@ h1 {
     border-radius: 10px;
 }
 /* 
+    End of answer display section
     End of answer display section
 */
 /* End of main workspace screen */
