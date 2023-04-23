@@ -1,0 +1,36 @@
+.header {
+  text-align: center; 
+}
+
+.input-field {
+  width: 30%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid black;
+  border-radius: 4px;
+}
+
+.text-area {
+  width: 30%;
+  height: 100px; 
+  padding: 12px 20px;
+  box-sizing: border-box; 
+  border: 2px solid black;
+  border-radius: 4px;
+  margin: 8px 0;
+}
+
+.btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 8px 0;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
