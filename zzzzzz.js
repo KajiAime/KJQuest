@@ -2,8 +2,8 @@ const mysql = require('mysql2/promise');
 
 const connection = mysql.createConnection({
   host: 'localhost',
-  user: 'kaji',
-  password: '1e2b3o4m',
+  user: 'root',
+  password: '',
   database: 'my_database'
 });
 for (const key in connection) {

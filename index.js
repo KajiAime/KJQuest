@@ -85,23 +85,23 @@ app.get('/answer', (req, res) => {
     });
 });
 app.get('/', (req, res) => {
-    res.render('logAdmin');
+    res.render('logUser');
 })
 app.get('/form', (req, res) =>{
     res.render('form');
 });
 app.get('/adminSubmit', (req, res) => {
-    const data = req.body.userName;
-    con.query(`SELECT * FROM userinfo WHERE userName = ?`, [data], (error, result) => {
-        if(error) throw error;
-        if(req.body.passWord === result.passWord){
-            res.render('setQuest', {name: result.userName})
-        } else {
-            res.render('loginAdmin', {text: "Incorrect credentials! Try again."})
-        }
-    });
-})
-// app.get('')
+    // const data = req.body.userName;
+    // con.query(`SELECT * FROM userinfo WHERE userName = ?`, [data], (error, result) => {
+        // if(error) throw error;
+        // if(req.body.passWord === result.passWord){
+            res.render('setQuest', {user: "Kaji"});
+        // } else {
+            // res.render('loginAdmin', {text: "Incorrect credentials! Try again."})
+        // }
+    // });
+});
+app.get('/adminLogin', (req, res)){}
 app.use(express.static('public'));
 app.listen(3000, () => {
     console.log('Server started on: http://127.0.0.1:3000');

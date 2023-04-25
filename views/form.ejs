@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/style.css">
+    <link rel="stylesheet" href="/style.css">
+    <title></title>
+</head>
+<body>
+    <nav>
+        <h1>KJQUEST</h1>
+        <img src="../images/burger.png" id="burger" alt="burger">
+    </nav>
+    <div id="side-col">
+        <div class="drawer"><span>Instructor Profile</span> <img id="dropt" src="../images/triangle.png" alt=""></div>
+        <div>
+            <p>Username:</p>
+            <p><b>Ngobah</b></p>
+            <p>Email:</p>
+            <p><b>doacas@hotmail.com</b></p>
+        </div>
+    </div>
+    <div id="main">
+        <!-- Start of question number indicator -->
+        <div id="qstno">
+            <span>Question No.</span>
+            <div id="current">
+                0
+            </div>
+        </div>
+        <!-- End of number-of-attempts board -->
+        <!-- Start of score display board -->
+        <div id="score">
+            <span>Score</span>
+            <div id="numscore">0</div>
+        </div>
+        <!-- End of score display board -->
+        <!-- Start of form control buttons section -->
+        <form action="./form.html" method="post">
+            <div id="butts">
+                <button id="prev">Previous</button>
+                <button id="next">Next</button>
+            </div>
+        <!-- End of form control buttons section -->
+        <!-- Start of question display box -->
+            <div id="qstn">
+                <span>Question</span>
+                <div id="question">
+                    <div><input type="text" class="inputs" placeholder="type..."></div>    
+                </div>
+            </div>
+        <!-- End of question display box -->
+        <!-- Start of answer display section -->
+            <div id="answ">
+                <div class = "answer">
+                    <span id="A">A</span>
+                    <div><input type="text" class="inputs" name="optA" placeholder="type..."></div>  
+                </div>
+                <div class = "answer">
+                    <span id="B">B</span>
+                    <div><input type="text" class="inputs" name="optB" placeholder="type..."></div>  
+                </div>
+                <div class = "answer">
+                    <span id="C">C</span>
+                    <div><input type="text" class="inputs" name="optC" placeholder="type..."></div>  
+                </div>
+                <div class = "answer">
+                    <span id="D">D</span>
+                    <div><input type="text" class="inputs" name="optD" placeholder="type..."></div>  
+                </div>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+        <!-- End of answer display section -->
+    </div>
+</body>
+</html>
